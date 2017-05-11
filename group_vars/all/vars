@@ -1,0 +1,13 @@
+# -*- mode: yaml; -*-
+
+
+papertrail_version: '0.19'
+
+helga_cmd_prefix: ','
+helga_home: /opt/bots/{{ helga_nick }}
+helga_operators:
+  - bigjust
+
+papertrail_files:
+  - path: /var/log/supervisor/*.log
+    tag: helga

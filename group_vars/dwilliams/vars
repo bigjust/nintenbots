@@ -1,0 +1,13 @@
+# -*- mode: Yaml -*-
+
+helga_nick: darnell
+helga_default_plugins: []
+
+helga_external_plugins:
+  - src: helga-urban-jeopardy
+    name: urban_jeopardy
+    version: 0.1.0
+
+helga_settings_extra:
+  log_level: 'INFO'
+  urban_jeopardy_mashape_key: {{ vault_mashape_key }}

@@ -1,0 +1,61 @@
+# -*- mode: Yaml -*-
+---
+
+helga_nick: aineko
+
+helga_default_plugins:
+  - help
+  - version
+  - manager
+  - oral
+
+helga_settings_extra:
+  youtube_data_api_key: {{ vault_youtube_key }}
+  mimic_state_size: 2
+  reddit_username: {{ vault_reddit_username }}
+  reddit_password: {{ vault_reddit_password }}
+  reddit_client_id: {{ vault_reddit_client_id }}
+  reddit_secret: {{ vault_reddit_secret }}
+
+helga_external_plugins:
+
+  - name: youtube-meta
+    src: git+https://github.com/bigjust/helga-youtube-metadata#egg=helga-youtube-meta
+
+  - name: yelling
+    src: helga-yelling
+    version: 0.2.0
+
+  - name: oral_history
+    src: helga-oral-history
+    version: 0.1.1
+
+  - name: mimic
+    src: helga-mimic
+    version: 0.2.2
+
+  - name: isup
+    src: git+https://github.com/bigjust/helga-isup.git#egg=helga-isup
+
+  - name: yall
+    src: git+https://github.com/alfredodeza/helga-yall#egg=helga-yall
+
+  # - name: craigslist-metadata
+  #   src: git+https://github.com/narfman0/helga-craigslist-metadata.git#egg=helga-craigslist-metadata
+
+  - name: stfu
+    src: git+https://github.com/shaunduncan/helga-stfu.git#egg=helga-stfu
+
+  - name: ignore
+    src: git+https://github.com/shaunduncan/helga-ignore.git#egg=helga-ignore
+
+  - name: queue
+    src: git+https://github.com/jantman/helga-queue.git#egg=helga-queue
+
+  - name: urbandictionary
+    src: git+https://github.com/bigjust/helga-urbandictionary.git#egg=helga-urbandictionary
+    #version: 1.1.2
+
+  - name: shitpost
+    src: /root/shitpost.tar.gz
+    state: forcereinstall

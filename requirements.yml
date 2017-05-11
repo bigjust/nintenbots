@@ -1,0 +1,7 @@
+- name: bigjust.helga
+  src: https://github.com/bigjust/ansible-helga
+  version: v1.0.0
+
+- name: mnn.papertrail
+  src: https://github.com/MotherNatureNetwork/ansible-papertrail
+  version: 1.2.1

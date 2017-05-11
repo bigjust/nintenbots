@@ -1,0 +1,52 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - name: Add Dead Snakes APT Key
+      become: yes
+      apt_key: keyserver=keyserver.ubuntu.com id=FF3997E83CD969B409FB24BC5BB92C09DB82666C
+
+    - name: Add Dead Snakes APT Repo
+      become: yes
+      apt_repository: repo='ppa:fkrull/deadsnakes-python2.7'
+
+    - name: Update Ubuntu repos
+      become: yes
+      apt: update_cache=yes
+
+    - name: Install system requirements
+      become: yes
+      apt: name={{ item }}
+      with_items:
+        - git
+        - libffi6
+        - libffi-dev
+        - libssl-dev
+        - mongodb
+        - openssl
+        - python2.7
+        - python-pip
+        - python-virtualenv
+
+    - name: make sure services are running.
+      become: yes
+      service: name={{ item }} state=running enabled=yes
+      with_items:
+        - mongodb
+
+  roles:
+    - role: bigjust.helga
+    - role: mnn.papertrail
+      tags:
+        - papertrail
+
+- hosts: vagrant
+  pre_tasks:
+
+    - name: Install system requirements
+      become: yes
+      apt: name=ngircd
+
+    - name: make sure services are running.
+      become: yes
+      service: name=ngircd state=running enabled=yes

@@ -1,0 +1,14 @@
+# -*- mode: Yaml -*-
+---
+
+helga_nick: xkebert
+
+helga_default_plugins: []
+
+helga_settings_extra:
+  log_level: 'INFO'
+
+helga_external_plugins:
+  - name: jeopardy
+    src: helga-jeopardy
+    version: 0.3.12

@@ -10,12 +10,12 @@ helga_default_plugins:
   - oral
 
 helga_settings_extra:
-  youtube_data_api_key: {{ vault_youtube_key }}
+  youtube_data_api_key: '{{ vault_youtube_key }}'
   mimic_state_size: 2
-  reddit_username: {{ vault_reddit_username }}
-  reddit_password: {{ vault_reddit_password }}
-  reddit_client_id: {{ vault_reddit_client_id }}
-  reddit_secret: {{ vault_reddit_secret }}
+  reddit_username: '{{ vault_reddit_username }}'
+  reddit_password: '{{ vault_reddit_password }}'
+  reddit_client_id: '{{ vault_reddit_client_id }}'
+  reddit_secret: '{{ vault_reddit_secret }}'
 
 helga_external_plugins:
 

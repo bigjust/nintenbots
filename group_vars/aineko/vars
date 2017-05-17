@@ -53,8 +53,8 @@ helga_external_plugins:
     src: git+https://github.com/jantman/helga-queue.git#egg=helga-queue
 
   - name: urbandictionary
-    src: git+https://github.com/bigjust/helga-urbandictionary.git#egg=helga-urbandictionary
-    #version: 1.1.2
+    src: helga-urbandictionary
+    version: 2.0.0
 
   - name: shitpost
     src: /root/shitpost.tar.gz

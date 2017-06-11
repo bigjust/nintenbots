@@ -20,6 +20,10 @@ helga_settings_extra:
 
 helga_external_plugins:
 
+  - name: alias
+    src: helga-alias
+    version: 0.1.1
+
   - name: youtube-meta
     src: git+https://github.com/bigjust/helga-youtube-metadata#egg=helga-youtube-meta
 

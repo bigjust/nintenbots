@@ -17,6 +17,8 @@ helga_settings_extra:
   reddit_password: '{{ vault_reddit_password }}'
   reddit_client_id: '{{ vault_reddit_client_id }}'
   reddit_secret: '{{ vault_reddit_secret }}'
+  aws_access_key_id: '{{ vault_aws_access_key_id }}'
+  aws_secret_access_key: '{{ vault_aws_secret_access_key }}'
 
 helga_external_plugins:
 
@@ -51,6 +53,10 @@ helga_external_plugins:
     src: helga-stfu
     version: 0.1.0
 
+  - name: urbandictionary
+    src: helga-urbandictionary
+    version: 2.0.0
+
   - name: yall
     src: git+https://github.com/alfredodeza/helga-yall#egg=helga-yall
 
@@ -62,6 +68,5 @@ helga_external_plugins:
     src: helga-youtube-meta
     version: 1.1.0
 
-  - name: urbandictionary
-    src: helga-urbandictionary
-    version: 2.0.0
+  - name: whodat
+    src: git+https://github.com/bigjust/helga-whodat.git#egg=helga-whodat

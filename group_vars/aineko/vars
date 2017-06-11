@@ -9,7 +9,6 @@ helga_default_plugins:
   - help
   - version
   - manager
-  - oral
 
 helga_settings_extra:
   youtube_data_api_key: '{{ vault_youtube_key }}'

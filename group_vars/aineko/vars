@@ -24,44 +24,44 @@ helga_external_plugins:
     src: helga-alias
     version: 0.1.1
 
-  - name: youtube-meta
-    src: helga-youtube-meta
-    version: 1.1.0
-
-  - name: yelling
-    src: helga-yelling
-    version: 0.2.0
-
-  - name: oral_history
-    src: helga-oral-history
-    version: 0.1.2
-
-  - name: mimic
-    src: helga-mimic
-    version: 0.2.2
+  - name: ignore
+    src: helga-ignore
+    version: 0.1.0
 
   - name: isup
     src: helga-isup
     version: 0.2.4
 
-  - name: yall
-    src: git+https://github.com/alfredodeza/helga-yall#egg=helga-yall
+  - name: mimic
+    src: helga-mimic
+    version: 0.2.2
+
+  - name: oral_history
+    src: helga-oral-history
+    version: 0.1.2
+
+  - name: queue
+    src: git+https://github.com/jantman/helga-queue.git#egg=helga-queue
+
+  - name: shitpost
+    src: /root/shitpost.tar.gz
+    state: forcereinstall
 
   - name: stfu
     src: helga-stfu
     version: 0.1.0
 
-  - name: ignore
-    src: helga-ignore
-    version: 0.1.0
+  - name: yall
+    src: git+https://github.com/alfredodeza/helga-yall#egg=helga-yall
 
-  - name: queue
-    src: git+https://github.com/jantman/helga-queue.git#egg=helga-queue
+  - name: yelling
+    src: helga-yelling
+    version: 0.2.0
+
+  - name: youtube-meta
+    src: helga-youtube-meta
+    version: 1.1.0
 
   - name: urbandictionary
     src: helga-urbandictionary
     version: 2.0.0
-
-  - name: shitpost
-    src: /root/shitpost.tar.gz
-    state: forcereinstall

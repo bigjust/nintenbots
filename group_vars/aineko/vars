@@ -40,7 +40,7 @@ helga_external_plugins:
     version: 0.2.2
 
   - name: isup
-    src: git+https://github.com/bigjust/helga-isup.git#egg=helga-isup
+    src: git+https://github.com/narfman0/helga-isup.git#egg=helga-isup
 
   - name: yall
     src: git+https://github.com/alfredodeza/helga-yall#egg=helga-yall

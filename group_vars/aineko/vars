@@ -41,9 +41,6 @@ helga_external_plugins:
   - name: yall
     src: git+https://github.com/alfredodeza/helga-yall#egg=helga-yall
 
-  # - name: craigslist-metadata
-  #   src: git+https://github.com/narfman0/helga-craigslist-metadata.git#egg=helga-craigslist-metadata
-
   - name: stfu
     src: git+https://github.com/shaunduncan/helga-stfu.git#egg=helga-stfu
 

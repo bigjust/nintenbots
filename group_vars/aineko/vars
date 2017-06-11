@@ -29,7 +29,7 @@ helga_external_plugins:
 
   - name: oral_history
     src: helga-oral-history
-    version: 0.1.1
+    version: 0.1.2
 
   - name: mimic
     src: helga-mimic

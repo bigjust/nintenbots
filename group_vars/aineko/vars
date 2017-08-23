@@ -20,11 +20,21 @@ helga_settings_extra:
   aws_access_key_id: '{{ vault_aws_access_key_id }}'
   aws_secret_access_key: '{{ vault_aws_secret_access_key }}'
 
+  britcoin_difficulty: 2
+
 helga_external_plugins:
 
   - name: alias
     src: helga-alias
-    version: 0.1.1
+    version: 0.1.3
+
+  - name: alkafact
+    src: helga-alkafact
+    version: 0.1.0
+
+  - name: britcoin
+    src: /root/britcoin.tar.gz
+    state: forcereinstall
 
   - name: ignore
     src: helga-ignore

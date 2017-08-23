@@ -22,19 +22,13 @@
         - libffi6
         - libffi-dev
         - libssl-dev
-        - mongodb
         - openssl
         - python2.7
         - python-pip
         - python-virtualenv
 
-    - name: make sure services are running.
-      become: yes
-      service: name={{ item }} state=running enabled=yes
-      with_items:
-        - mongodb
-
   roles:
+    - role: bigjust.mongodb
     - role: bigjust.helga
     - role: mnn.papertrail
       tags:

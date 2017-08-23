@@ -36,11 +36,11 @@ helga_external_plugins:
 
   - name: mimic
     src: helga-mimic
-    version: 0.2.2
+    version: 0.4.0
 
   - name: oral_history
     src: helga-oral-history
-    version: 0.1.2
+    version: 0.2.0
 
   - name: queue
     src: git+https://github.com/jantman/helga-queue.git#egg=helga-queue

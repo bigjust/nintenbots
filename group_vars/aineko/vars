@@ -20,6 +20,11 @@ helga_settings_extra:
   aws_access_key_id: '{{ vault_aws_access_key_id }}'
   aws_secret_access_key: '{{ vault_aws_secret_access_key }}'
 
+  twitter_consumer_key: '{{ vault_twitter_consumer_key }}'
+  twitter_consumer_secret: '{{ vault_twitter_consumer_secret }}'
+  twitter_access_token: '{{ vault_twitter_access_token }}'
+  twitter_access_secret: '{{ vault_twitter_access_secret }}'
+
   britcoin_difficulty: 2
 
 helga_external_plugins:
@@ -61,6 +66,10 @@ helga_external_plugins:
 
   - name: stfu
     src: helga-stfu
+    version: 0.1.0
+
+  - name: twitter
+    src: helga-twitter
     version: 0.1.0
 
   - name: urbandictionary

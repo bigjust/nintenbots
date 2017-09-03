@@ -74,6 +74,10 @@ helga_external_plugins:
     src: /root/shitpost.tar.gz
     state: forcereinstall
 
+  - name: spotify
+    src: helga-spotify
+    version: 1.0.0
+
   - name: stfu
     src: helga-stfu
     version: 0.1.0

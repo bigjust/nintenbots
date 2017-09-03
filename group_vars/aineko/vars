@@ -29,6 +29,10 @@ helga_settings_extra:
 
   britcoin_difficulty: 2
 
+helga_pypi_packages:
+  - name: tweepy
+    src: git+https://github.com/tweepy/tweepy.git@176061133bd5aa1592f222834498daf28018db0c#egg=tweepy
+
 helga_external_plugins:
 
   - name: alias
@@ -53,11 +57,11 @@ helga_external_plugins:
 
   - name: twitter
     src: helga-twitter
-    version: 0.4.0
+    version: 0.4.1
 
   - name: mimic
     src: helga-mimic
-    version: 0.4.1
+    version: 0.4.4
 
   - name: oral_history
     src: helga-oral-history

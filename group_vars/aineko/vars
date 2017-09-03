@@ -1,9 +1,8 @@
 # -*- mode: Yaml -*-
 ---
 
-helga_git_url: https://github.com/shaunduncan/helga.git
 helga_nick: aineko
-helga_source_dir: '{{ helga_home }}/helga-src'
+helga_version: 1.7.6
 
 helga_default_plugins:
   - help

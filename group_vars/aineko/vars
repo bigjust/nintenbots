@@ -10,14 +10,17 @@ helga_default_plugins:
   - manager
 
 helga_settings_extra:
-  youtube_data_api_key: '{{ vault_youtube_key }}'
+  britcoin_difficulty: 2
   mimic_state_size: 2
+  repost_remove_utm: True
+
+  aws_access_key_id: '{{ vault_aws_access_key_id }}'
+  aws_secret_access_key: '{{ vault_aws_secret_access_key }}'
+
   reddit_username: '{{ vault_reddit_username }}'
   reddit_password: '{{ vault_reddit_password }}'
   reddit_client_id: '{{ vault_reddit_client_id }}'
   reddit_secret: '{{ vault_reddit_secret }}'
-  aws_access_key_id: '{{ vault_aws_access_key_id }}'
-  aws_secret_access_key: '{{ vault_aws_secret_access_key }}'
 
   spotify_client_id: '{{ vault_spotify_client_id }}'
   spotify_secret: '{{ vault_spotify_secret }}'
@@ -27,7 +30,7 @@ helga_settings_extra:
   twitter_access_token: '{{ vault_twitter_access_token }}'
   twitter_access_secret: '{{ vault_twitter_access_secret }}'
 
-  britcoin_difficulty: 2
+  youtube_data_api_key: '{{ vault_youtube_key }}'
 
 helga_pypi_packages:
   - name: tweepy

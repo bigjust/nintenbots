@@ -40,7 +40,7 @@ helga_external_plugins:
 
   - name: alias
     src: helga-alias
-    version: 0.1.3
+    version: 0.2.1
 
   - name: alkafact
     src: helga-alkafact
@@ -64,7 +64,7 @@ helga_external_plugins:
 
   - name: mimic
     src: helga-mimic
-    version: 0.4.4
+    version: 0.4.5
 
   - name: oral_history
     src: helga-oral-history

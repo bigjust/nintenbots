@@ -62,6 +62,10 @@ helga_external_plugins:
     src: helga-twitter
     version: 0.4.1
 
+  - name: mail
+    src: helga-mail
+    version: 1.0.0
+
   - name: mimic
     src: helga-mimic
     version: 0.4.9

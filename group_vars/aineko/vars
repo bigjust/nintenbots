@@ -64,7 +64,7 @@ helga_external_plugins:
 
   - name: mimic
     src: helga-mimic
-    version: 0.4.7
+    version: 0.4.9
 
   - name: oral_history
     src: helga-oral-history

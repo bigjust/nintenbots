@@ -2,7 +2,9 @@
 ---
 
 helga_nick: aineko
-helga_version: 1.7.6
+helga_password: '{{ vault_irc_password }}'
+
+helga_version: 1.7.7
 
 helga_default_plugins:
   - help

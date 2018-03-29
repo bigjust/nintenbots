@@ -81,7 +81,7 @@ helga_external_plugins:
 
   - name: repost
     src: helga-repost
-    version: 1.0.0
+    version: 1.0.2
 
   - name: shitpost
     src: /root/shitpost.tar.gz

@@ -79,6 +79,9 @@ helga_external_plugins:
   - name: queue
     src: git+https://github.com/jantman/helga-queue.git#egg=helga-queue
 
+  - name: reminders
+    src: git+https://github.com/bigjust/helga-reminders.git#egg=helga-reminders
+
   - name: repost
     src: helga-repost
     version: 1.0.2

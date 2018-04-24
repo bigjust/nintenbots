@@ -62,7 +62,7 @@ helga_external_plugins:
 
   - name: twitter
     src: helga-twitter
-    version: 0.4.1
+    version: 0.4.3
 
   - name: mail
     src: helga-mail

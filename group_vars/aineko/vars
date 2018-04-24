@@ -35,8 +35,8 @@ helga_settings_extra:
   youtube_data_api_key: '{{ vault_youtube_key }}'
 
 helga_pypi_packages:
-  - name: tweepy
-    src: git+https://github.com/tweepy/tweepy.git@176061133bd5aa1592f222834498daf28018db0c#egg=tweepy
+  - src: tweepy
+    version: 3.6.0
 
 helga_external_plugins:
 

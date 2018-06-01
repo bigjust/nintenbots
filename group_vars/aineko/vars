@@ -61,8 +61,9 @@ helga_external_plugins:
     version: 0.2.4
 
   - name: twitter
-    src: helga-twitter
-    version: 0.4.3
+    #src: helga-twitter
+    #version: 0.4.3
+    src: git+https://github.com/bigjust/helga-twitter.git#egg=helga-twitter
 
   - name: mail
     src: helga-mail

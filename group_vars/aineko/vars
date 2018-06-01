@@ -12,6 +12,9 @@ helga_default_plugins:
   - manager
 
 helga_settings_extra:
+
+  log_level: 'WARNING'
+
   britcoin_difficulty: 2
   mimic_state_size: 2
   repost_remove_utm: True

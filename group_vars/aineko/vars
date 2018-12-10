@@ -49,7 +49,7 @@ helga_external_plugins:
 
   - name: alkafact
     src: helga-alkafact
-    version: 0.1.0
+    version: 0.2.0
 
   - name: britcoin
     src: /root/britcoin.tar.gz

@@ -11,4 +11,4 @@ helga_settings_extra:
 helga_external_plugins:
   - name: jeopardy
     src: helga-jeopardy
-    version: 0.3.14
+    version: 0.3.15

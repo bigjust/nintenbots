@@ -90,6 +90,10 @@ helga_external_plugins:
     src: helga-repost
     version: 1.0.2
 
+  - name: roll
+    src: helga-roll
+    version: 1.1.0
+
   - name: shitpost
     src: /root/shitpost.tar.gz
     state: forcereinstall

@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: helga
+  name: helga
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: helga
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: helga
+    spec:
+      containers:
+      - args:
+        - --settings=/code/settings-aineko.py
+        env:
+        - name: HELGA_IRC_SERVER
+          value: chat.freenode.net
+        - name: HELGA_MONGO_HOST
+          value: mongo
+        - name: HELGA_NICK
+          value: aineko-test
+        image: bigjust/aineko:latest
+        imagePullPolicy: "Always"
+        name: helga
+        resources: {}
+        volumeMounts:
+        - mountPath: /code
+          name: helga-claim0
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: helga-claim0
+        persistentVolumeClaim:
+          claimName: helga-claim0
+status: {}

@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:3
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_data:/data/db
+
+  helga:
+    #build: .
+    image: bigjust/aineko:latest
+    command: --settings=settings-aineko.py
+    environment:
+      - HELGA_NICK=aineko-test
+      - HELGA_MONGO_HOST=mongo
+      - HELGA_IRC_SERVER=chat.freenode.net
+    volumes:
+      - .:/code
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:

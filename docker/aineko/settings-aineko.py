@@ -23,5 +23,4 @@ ENABLED_PLUGINS = [
     'version',
     'manager',
     'yelling',
-    ]
-
+]

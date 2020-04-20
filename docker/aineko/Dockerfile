@@ -1,7 +1,10 @@
 From bigjust/helga:latest
 
 WORKDIR /code
-ADD settings-aineko.py settings-aineko.py
+ADD settings-aineko.py /aineko-settings.py
 RUN pip install helga-yelling
+#RUN ls /code
+RUN pip install /code
 
-CMD ["--settings=/code/settings-aineko.py"]
+ENTRYPOINT ["/usr/local/bin/helga"]
+CMD ["--settings=/aineko-settings.py"]

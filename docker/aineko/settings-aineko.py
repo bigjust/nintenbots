@@ -1,6 +1,6 @@
 import os
 
-NICK = os.environ.get('HELGA_NICK', 'helga')
+NICK = os.environ.get('HELGA_NICK', 'aineko')
 
 SERVER = {
     'HOST': os.environ.get('HELGA_IRC_SERVER'),
@@ -9,7 +9,7 @@ SERVER = {
 }
 
 CHANNELS = [
-    ('#helga-dev',),
+    (os.environ.get('HELGA_IRC_CHANNEL', '#helga-dev'),)
 ]
 
 DATABASE = {

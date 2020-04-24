@@ -1,3 +1,15 @@
+- project:
+    name: Aineko
+    jobs:
+      - 'update-aineko-infra'
+      - 'build-aineko-container'
+
+- project:
+    name: Helga
+    jobs:
+      - 'helga-unit-tests'
+      - 'build-helga-container'
+
 - job:
     name: 'update-aineko-infra'
     display-name: 'Update Aineko Infra'
@@ -13,18 +25,10 @@
     builders:
       - shell: 'terraform --version'
 
-- project:
-    name: Aineko
-    jobs:
-      - 'update-aineko-infra'
 
-- project:
-    name: Helga
-    jobs:
-      - 'helga-unit-tests'
-
-- defaults:
-    name: helga
+- job:
+    name: 'helga-unit-tests'
+    display-name: 'Helga Unit Tests'
     scm:
       - git:
           url: https://github.com/bigjust/helga.git
@@ -34,9 +38,35 @@
           browser-url: https://github.com/bigjust/helga.git
           timeout: 20
 
-- job:
-    name: 'helga-unit-tests'
-    display-name: 'Helga Unit Tests'
-    defaults: helga
     builders:
       - shell: tox -e py38
+
+- job:
+    name: 'build-helga-container'
+    scm:
+      - git:
+          url: https://github.com/bigjust/helga.git
+          branches:
+            - wip-python3
+          browser: githubweb
+          browser-url: https://github.com/bigjust/helga.git
+          timeout: 20
+
+    display-name: 'Build Helga container'
+    builders:
+      - shell: docker build .
+
+- job:
+    name: 'build-aineko-container'
+    display-name: 'Build Aineko container'
+    scm:
+      - git:
+          url: https://github.com/bigjust/nintenbots.git
+          branches:
+            - master
+          browser: githubweb
+          browser-url: https://github.com/bigjust/nintenbots.git
+          timeout: 20
+
+    builders:
+      - shell: docker build docker/aineko

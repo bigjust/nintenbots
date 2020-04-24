@@ -1,1 +1,7 @@
+helga-alkafact==0.2.0
+helga-ignore==0.1.0
+#helga-isup==0.2.4
+helga-oral-history==0.2.0
+helga-spotify==1.0.0
+helga-urbandictionary==2.0.0
 helga-yelling==0.2.2
